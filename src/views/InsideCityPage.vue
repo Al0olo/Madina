@@ -17,6 +17,23 @@
                     </ion-radio-group>
                 </ion-card-content>
             </ion-card>
+            <ion-card id="form-card">
+                <ion-card-content>
+                    <ion-select label="From" label-placement="floating">
+                      <ion-select-option value="apple">Apple</ion-select-option>
+                      <ion-select-option value="banana">Banana</ion-select-option>
+                      <ion-select-option value="orange">Orange</ion-select-option>
+                    </ion-select>
+                    <ion-select label="To" label-placement="floating">
+                      <ion-select-option value="apple">Apple</ion-select-option>
+                      <ion-select-option value="banana">Banana</ion-select-option>
+                      <ion-select-option value="orange">Orange</ion-select-option>
+                    </ion-select>
+                    <ion-input style="text-align:left" fill="solid" placeholder="Waiting Time"></ion-input>
+                    <ion-input style="text-align:left" fill="solid" placeholder="Mobile Number"></ion-input>
+                    
+                </ion-card-content>
+            </ion-card>
         </div>
       </ion-content>
     </ion-page>
@@ -24,10 +41,10 @@
   
 <script lang="ts">
 //   import my from './HomePage.vue';
-  import { IonContent,  IonPage,IonCard, IonCardContent,IonRadio, IonRadioGroup } from '@ionic/vue';
+  import { IonContent,  IonPage,IonCard, IonCardContent,IonRadio, IonRadioGroup,IonSelect, IonSelectOption,IonInput } from '@ionic/vue';
   
   export default {
-      components: { IonContent, IonPage,IonCard,IonCardContent,IonRadio, IonRadioGroup},
+      components: { IonContent, IonPage,IonCard,IonCardContent,IonRadio, IonRadioGroup,IonSelect, IonSelectOption,IonInput},
       data() {
         return {
             // lo: my,
