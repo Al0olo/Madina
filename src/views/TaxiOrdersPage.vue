@@ -31,10 +31,10 @@
   
 <script lang="ts">
 //   import my from './HomePage.vue';
-  import { IonContent,IonInput, IonItem,  IonPage,IonCard, IonCardContent, IonCardHeader, IonCardTitle,IonSearchbar,IonButton, IonNavLink } from '@ionic/vue';
+  import { IonContent,  IonPage,IonCard, IonCardContent, IonSearchbar,IonButton, IonNavLink } from '@ionic/vue';
   
   export default {
-      components: { IonContent, IonPage,IonInput,IonItem,IonCard,IonCardContent, IonCardHeader, IonCardTitle,IonSearchbar,IonButton, IonNavLink},
+      components: { IonContent, IonPage,IonCard,IonCardContent, IonSearchbar,IonButton, IonNavLink},
       data() {
         return {
             // lo: my,
