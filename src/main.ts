@@ -33,9 +33,25 @@ import '@ionic/vue/css/palettes/dark.system.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import { createI18n } from "vue-i18n";
+import ar from "./locales/ar.json";
+import en from "./locales/en.json";
+
+/* Multi Lang Support */
+const messages = {ar,en};
+
+export const i18n = createI18n({
+  locale:
+    navigator.language.split("-")[0] || import.meta.env.VUE_APP_I18N_LOCALE || "en",
+  fallbackLocale: import.meta.env.VUE_APP_I18N_FALLBACK_LOCALE || "en",
+  messages ,
+  legacy: false,
+});
+
 
 const app = createApp(App)
   .use(IonicVue)
+  .use(i18n)
   .use(router);
 
 router.isReady().then(() => {
