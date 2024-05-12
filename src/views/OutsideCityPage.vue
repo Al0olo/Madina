@@ -6,7 +6,10 @@
         <div id="container">
             <ion-card id="taxi-banner">
                 <ion-card-content>
-                    <img alt="Silhouette of mountains" src="../assets/img/OutsideCityBanner.svg" style="width:100%;height:100%;position:fixed;top:0;left:0" />
+                    <ion-radio-group value="">
+                      <ion-radio value="one" label-placement="start" style="display:block;width:60%;font-size:1.7rem;color:black;font-weight:bold">One Way</ion-radio>
+                      <ion-radio value="two" label-placement="start" style="display:block;width:60%;font-size:1.7rem;color:black;font-weight:bold">Two Ways</ion-radio>
+                    </ion-radio-group>
                 </ion-card-content>
             </ion-card>
         </div>
@@ -16,10 +19,10 @@
   
 <script lang="ts">
 //   import my from './HomePage.vue';
-  import { IonContent,  IonPage,IonCard, IonCardContent } from '@ionic/vue';
+  import { IonContent,  IonPage,IonCard, IonCardContent,IonRadio, IonRadioGroup } from '@ionic/vue';
   
   export default {
-      components: { IonContent, IonPage,IonCard,IonCardContent},
+      components: { IonContent, IonPage,IonCard,IonCardContent,IonRadio, IonRadioGroup},
       data() {
         return {
             // lo: my,
