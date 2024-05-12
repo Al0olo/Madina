@@ -12,8 +12,8 @@
             <ion-card id="ways-card">
                 <ion-card-content>
                     <ion-radio-group value="">
-                      <ion-radio value="one" label-placement="start" style="display:block;width:60%;font-size:1.7rem;color:black;font-weight:bold">One Way</ion-radio>
-                      <ion-radio value="two" label-placement="start" style="display:block;width:60%;font-size:1.7rem;color:black;font-weight:bold">Two Ways</ion-radio>
+                      <ion-radio value="one" aria-label="Custom checkbox" label-placement="start" style="display:block;width:60%;font-size:1.7rem;color:black;font-weight:bold">One Way</ion-radio>
+                      <ion-radio value="two" aria-label="Custom checkbox" label-placement="start" style="display:block;width:60%;font-size:1.7rem;color:black;font-weight:bold">Two Ways</ion-radio>
                     </ion-radio-group>
                 </ion-card-content>
             </ion-card>
@@ -84,6 +84,26 @@
   #ways-card {
     background: #E1BF7E;
     height: 18.5vh;
+  }
+  ion-radio {
+    --border-radius: 8px;
+    --inner-border-radius: 8px;
+
+    --color: #ddd;
+    /* --color-checked: #6815ec; */
+  }
+
+  ion-radio.ios::part(container) {
+    width: 30px;
+    height: 30px;
+
+    border: 4px solid #ddd;
+    border-radius: 4px;
+  }
+
+  .radio-checked.ios::part(container) {
+    border-color: #000000;
+    background-color: #000000
   }
   </style>
   

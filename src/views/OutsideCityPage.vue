@@ -85,5 +85,25 @@
     background: #E1BF7E;
     height: 18.5vh;
   }
+  ion-radio {
+    --border-radius: 8px;
+    --inner-border-radius: 8px;
+
+    --color: #ddd;
+    /* --color-checked: #6815ec; */
+  }
+
+  ion-radio.ios::part(container) {
+    width: 30px;
+    height: 30px;
+
+    border: 4px solid #ddd;
+    border-radius: 4px;
+  }
+
+  .radio-checked.ios::part(container) {
+    border-color: #000000;
+    background-color: #000000
+  }
   </style>
   
