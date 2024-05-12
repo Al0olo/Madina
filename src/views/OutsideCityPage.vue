@@ -6,6 +6,11 @@
         <div id="container">
             <ion-card id="taxi-banner">
                 <ion-card-content>
+                    <img alt="Silhouette of mountains" src="../assets/img/OutsideCityBanner.svg" style="width:100%;height:100%;position:fixed;top:0;left:0" />
+                </ion-card-content>
+            </ion-card>
+            <ion-card id="ways-card">
+                <ion-card-content>
                     <ion-radio-group value="">
                       <ion-radio value="one" label-placement="start" style="display:block;width:60%;font-size:1.7rem;color:black;font-weight:bold">One Way</ion-radio>
                       <ion-radio value="two" label-placement="start" style="display:block;width:60%;font-size:1.7rem;color:black;font-weight:bold">Two Ways</ion-radio>
@@ -75,6 +80,10 @@
     top:220%;
     left:35%;
     z-index: 3000;
+  }
+  #ways-card {
+    background: #E1BF7E;
+    height: 18.5vh;
   }
   </style>
   
