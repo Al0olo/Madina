@@ -11,7 +11,7 @@
                     <ion-nav-link router-direction="forward" :component="orderTaxi"> <ion-button id="login-button">{{ ("Order Taxi") }} </ion-button></ion-nav-link>
                 </ion-card-content>
             </ion-card>
-            <h2>TAXI MADINA</h2>
+            <h2 style="font-weight:bold;padding-bottom:0.5rem;padding-top:1rem;border-bottom:5px solid yellow;width:50%;margin:auto;margin-bottom:1rem;">TAXI MADINA</h2>
             <p style="text-align:left;width:90%;margin:auto">This is a place holder text to be changed with real description, This is a place holder text to be changed with real description, 
                 This is a place holder text to be changed with real description, This is a place holder text to be changed with real description, 
                 This is a place holder text to be changed with real description, This is a place holder text to be changed with real description, 

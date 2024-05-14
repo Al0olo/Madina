@@ -17,6 +17,29 @@
                     </ion-radio-group>
                 </ion-card-content>
             </ion-card>
+            <ion-card id="form-card">
+                <ion-card-content>
+                    <ion-select label="From" label-placement="floating">
+                      <ion-select-option value="apple">5A</ion-select-option>
+                      <ion-select-option value="banana">5D</ion-select-option>
+                      <ion-select-option value="orange">M4</ion-select-option>
+                    </ion-select>
+                    <ion-select label="To" label-placement="floating">
+                      <ion-select-option value="apple">A7</ion-select-option>
+                      <ion-select-option value="banana">A4</ion-select-option>
+                      <ion-select-option value="orange">A3</ion-select-option>
+                    </ion-select>
+                    <ion-input style="text-align:left" fill="solid" placeholder="Waiting Time"></ion-input>
+                    <ion-input style="text-align:left" fill="solid" placeholder="Mobile Number"></ion-input>
+                    <ion-button id='time-btn'>5 Min</ion-button>
+                    <ion-button id='time-btn'>10 Min</ion-button>
+                    <ion-button id='time-btn'>15 Min</ion-button>
+                    <ion-button id='time-btn'>20 Min</ion-button>
+                    <ion-button id='time-btn'>25 Min</ion-button>
+
+                    <ion-button id="order-now" style='display:block'>Order Now</ion-button>
+                </ion-card-content>
+            </ion-card>
         </div>
       </ion-content>
     </ion-page>
@@ -24,10 +47,10 @@
   
 <script lang="ts">
 //   import my from './HomePage.vue';
-  import { IonContent,  IonPage,IonCard, IonCardContent,IonRadio, IonRadioGroup } from '@ionic/vue';
+  import { IonContent,  IonPage,IonCard, IonCardContent,IonRadio, IonRadioGroup,IonSelect, IonSelectOption,IonInput,IonButton } from '@ionic/vue';
   
   export default {
-      components: { IonContent, IonPage,IonCard,IonCardContent,IonRadio, IonRadioGroup},
+      components: { IonContent, IonPage,IonCard,IonCardContent,IonRadio, IonRadioGroup,IonSelect, IonSelectOption,IonInput,IonButton},
       data() {
         return {
             // lo: my,
@@ -104,6 +127,59 @@
   .radio-checked.ios::part(container) {
     border-color: #000000;
     background-color: #000000
+  }
+  ion-button#order-now {
+    --background: #E1BF7E;
+    --color: white;
+
+    --border-radius: 15px;
+    --padding-top: 0.7rem;
+    --padding-bottom: 0.7rem;
+    font-size:1rem;
+    display:block;
+    width:60%;
+    margin:auto;
+    margin-top:2rem;
+    margin-bottom:2rem;
+  }
+  ion-button#time-btn {
+    --background: #white;
+    --color: black;
+    --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+    --border-radius: 15px;
+    --padding-top: 0.7rem;
+    --padding-bottom: 0.7rem;
+    font-size:1rem;
+    display:inline-block;
+    width:28%;
+    margin:auto;
+    margin-top:0.5rem;
+    margin-bottom:0.5rem;
+    margin:0.4rem;
+  }
+  ion-input {
+    border: 1px solid rgba(0, 0, 0, 0.059);
+    border-radius: 5px;
+    text-align: left;
+    --placeholder-color: #E1BF7E;
+    font-weight: bold;
+    --placeholder-opacity: 0.9;
+    margin-bottom:0.5rem;
+    --padding-bottom: 10px;
+    --padding-end: 10px;
+    --padding-start: 10px;
+    --padding-top: 10px;
+  }
+  ion-select {
+    border: 1px solid rgba(0, 0, 0, 0.059);
+    border-radius: 5px;
+    color: #E1BF7E;
+    font-weight: bold;
+    margin-bottom:0.5rem;
+    --padding-bottom: 10px;
+    --padding-end: 10px;
+    --padding-start: 10px;
+    /* --padding-top: 10px; */
   }
   </style>
   
