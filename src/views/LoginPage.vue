@@ -3,9 +3,10 @@
   
       <ion-content :fullscreen="true">
         <div id="container">
+          <img src="../assets/icon.png" width="128px" style="position: absolute;top:5rem;left:50%;transform:translateX(-50%)"/>
           <ion-card id="signup-modal">
             <ion-card-header>
-              <ion-card-title class="page-title">Sign Up/Login</ion-card-title>
+              <ion-card-title class="page-title">Login</ion-card-title>
               <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
             </ion-card-header>
           
