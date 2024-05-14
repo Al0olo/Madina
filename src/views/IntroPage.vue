@@ -1,7 +1,22 @@
 <!-- eslint-disable vue/no-unused-components -->
 <template>
-    <ion-page>
-  
+  <ion-menu content-id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Profile</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">This is the menu content.</ion-content>
+  </ion-menu>
+    <ion-page id="main-content">
+      <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Home</ion-title>
+      </ion-toolbar>
+    </ion-header>
       <ion-content :fullscreen="true">
         <div id="container">
             <ion-searchbar placeholder="Search"></ion-searchbar>
@@ -26,10 +41,10 @@
   
 <script lang="ts">
   import my from './TaxiOrdersPage.vue';
-  import { IonContent,  IonPage,IonCard, IonCardContent, IonSearchbar,IonButton, IonNavLink } from '@ionic/vue';
+  import { IonButtons,IonContent,  IonPage,IonCard, IonCardContent, IonSearchbar,IonButton, IonNavLink,IonHeader, IonMenu, IonMenuButton,IonTitle, IonToolbar } from '@ionic/vue';
   
   export default {
-      components: { IonContent, IonPage,IonCard,IonCardContent,IonSearchbar,IonButton, IonNavLink},
+      components: { IonButtons,IonContent,IonCard,IonCardContent,IonSearchbar,IonButton, IonNavLink,IonHeader, IonMenu, IonMenuButton, IonPage, IonTitle, IonToolbar},
       data() {
         return {
             orderTaxi: my,
@@ -43,7 +58,7 @@
     text-align: center;
     height: 100vh;
     position: absolute;
-    top: 5%;
+    top: 11%;
     transform: translateY(0%);
     left: 0;
     right: 0;
