@@ -31,6 +31,14 @@
                     </ion-select>
                     <ion-input style="text-align:left" fill="solid" placeholder="Waiting Time"></ion-input>
                     <ion-input style="text-align:left" fill="solid" placeholder="Mobile Number"></ion-input>
+                    <ion-button>5 Min</ion-button>
+                    <ion-button>10 Min</ion-button>
+                    <ion-button>15 Min</ion-button>
+                    <ion-button>20 Min</ion-button>
+                    <ion-button>25 Min</ion-button>
+
+                    <ion-button style='display:block'>Order Now</ion-button>
+
                     
                 </ion-card-content>
             </ion-card>
@@ -41,10 +49,10 @@
   
 <script lang="ts">
 //   import my from './HomePage.vue';
-  import { IonContent,  IonPage,IonCard, IonCardContent,IonRadio, IonRadioGroup,IonSelect, IonSelectOption,IonInput } from '@ionic/vue';
+  import { IonContent,  IonPage,IonCard, IonCardContent,IonRadio, IonRadioGroup,IonSelect, IonSelectOption,IonInput,IonButton } from '@ionic/vue';
   
   export default {
-      components: { IonContent, IonPage,IonCard,IonCardContent,IonRadio, IonRadioGroup,IonSelect, IonSelectOption,IonInput},
+      components: { IonContent, IonPage,IonCard,IonCardContent,IonRadio, IonRadioGroup,IonSelect, IonSelectOption,IonInput,IonButton},
       data() {
         return {
             // lo: my,
