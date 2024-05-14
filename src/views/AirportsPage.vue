@@ -109,6 +109,7 @@
   #ways-card {
     background: #E1BF7E;
     height: 18.5vh;
+    padding-top: 1rem;
   }
   ion-radio {
     --border-radius: 8px;
