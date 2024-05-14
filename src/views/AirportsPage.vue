@@ -38,6 +38,8 @@
                     <ion-button id='time-btn'>25 Min</ion-button>
 
                     <ion-button id="order-now" style='display:block'>Order Now</ion-button>
+                    <ion-loading trigger="order-now" :duration="10000" message="Please wait while matching your order..."> </ion-loading>
+
                 </ion-card-content>
             </ion-card>
         </div>
@@ -47,10 +49,10 @@
   
 <script lang="ts">
 //   import my from './HomePage.vue';
-  import { IonContent,  IonPage,IonCard, IonCardContent,IonRadio, IonRadioGroup,IonSelect, IonSelectOption,IonInput,IonButton } from '@ionic/vue';
+  import { IonContent,  IonPage,IonCard, IonCardContent,IonRadio, IonRadioGroup,IonSelect, IonSelectOption,IonInput,IonButton,IonLoading } from '@ionic/vue';
   
   export default {
-      components: { IonContent, IonPage,IonCard,IonCardContent,IonRadio, IonRadioGroup,IonSelect, IonSelectOption,IonInput,IonButton},
+      components: { IonContent, IonPage,IonCard,IonCardContent,IonRadio, IonRadioGroup,IonSelect, IonSelectOption,IonInput,IonButton,IonLoading},
       data() {
         return {
             // lo: my,
