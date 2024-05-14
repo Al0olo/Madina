@@ -75,9 +75,24 @@
   }
   #login-button {
     position:absolute;
-    top:220%;
-    left:35%;
+    top:150%;
+    left:20%;
     z-index: 3000;
+  }
+  ion-button#login-button {
+    --background: black;
+    font-weight: bold;
+    --color: white;
+
+    --border-radius: 15px;
+    --padding-top: 0.7rem;
+    --padding-bottom: 0.7rem;
+    font-size:1rem;
+    display:block;
+    width:60%;
+    margin:auto;
+    margin-top:2rem;
+    margin-bottom:2rem;
   }
   </style>
   
