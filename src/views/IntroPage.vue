@@ -1,5 +1,10 @@
 <!-- eslint-disable vue/no-unused-components -->
 <template>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end" :edge="true">
+    <ion-fab-button>
+      <ion-icon :icon="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
   <ion-menu content-id="main-content">
     <ion-header>
       <ion-toolbar>
@@ -42,18 +47,24 @@
 <script lang="ts">
   import my from './TaxiOrdersPage.vue';
   import { IonButtons,IonContent,  IonPage,IonCard, IonCardContent, IonSearchbar,IonButton, IonNavLink,IonHeader, IonMenu, IonMenuButton,IonTitle, IonToolbar } from '@ionic/vue';
+  import { IonFab, IonFabButton, IonIcon } from '@ionic/vue';
+  import { add } from 'ionicons/icons';
   
   export default {
-      components: { IonButtons,IonContent,IonCard,IonCardContent,IonSearchbar,IonButton, IonNavLink,IonHeader, IonMenu, IonMenuButton, IonPage, IonTitle, IonToolbar},
+      components: { IonFab, IonFabButton, IonIcon, IonButtons,IonContent,IonCard,IonCardContent,IonSearchbar,IonButton, IonNavLink,IonHeader, IonMenu, IonMenuButton, IonPage, IonTitle, IonToolbar},
       data() {
         return {
             orderTaxi: my,
         };
       },
+      setup() {
+        return { add };
+      },
     };
   </script>
   
   <style scoped>
+
   #container {
     text-align: center;
     height: 100vh;
@@ -63,7 +74,9 @@
     left: 0;
     right: 0;
   }
-  
+  ion-fab {
+  margin-bottom: var(--ion-safe-area-bottom, 0);
+  }
   #container strong {
     font-size: 20px;
     line-height: 26px;
