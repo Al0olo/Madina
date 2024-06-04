@@ -2,7 +2,7 @@
 <template>
   <ion-fab slot="fixed" vertical="bottom" horizontal="end" :edge="true">
     <ion-fab-button>
-      <ion-icon :icon="add"></ion-icon>
+      <ion-icon ></ion-icon>
     </ion-fab-button>
   </ion-fab>
   <ion-menu content-id="main-content">
@@ -28,9 +28,9 @@
             <ion-card id="taxi-banner">
                 <ion-card-content>
                     <img alt="Silhouette of mountains" src="../assets/img/TaxiBanner.svg" style="width:100%;height:100%;position:fixed;top:0;left:0" />
-                    <ion-nav-link router-direction="forward" :component="orderTaxi"> <ion-button id="login-button">{{ ("Order Taxi") }} </ion-button></ion-nav-link>
+                    <ion-button router-link="/taxiorder" id="login-button">{{ ("Order Taxi") }} </ion-button>
                 </ion-card-content>
-            </ion-card>
+            </ion-card> 
             <h2 style="font-weight:bold;padding-bottom:0.5rem;padding-top:1rem;border-bottom:5px solid yellow;width:50%;margin:auto;margin-bottom:1rem;">TAXI MADINA</h2>
             <p style="text-align:left;width:90%;margin:auto">This is a place holder text to be changed with real description, This is a place holder text to be changed with real description, 
                 This is a place holder text to be changed with real description, This is a place holder text to be changed with real description, 
@@ -46,20 +46,28 @@
   
 <script lang="ts">
   import my from './TaxiOrdersPage.vue';
-  import { IonButtons,IonContent,  IonPage,IonCard, IonCardContent, IonSearchbar,IonButton, IonNavLink,IonHeader, IonMenu, IonMenuButton,IonTitle, IonToolbar } from '@ionic/vue';
+  import { IonButtons,IonContent,  IonPage,IonCard, IonCardContent, IonSearchbar,IonButton,IonHeader, IonMenu, IonMenuButton,IonTitle, IonToolbar } from '@ionic/vue';
   import { IonFab, IonFabButton, IonIcon } from '@ionic/vue';
-  import { add } from 'ionicons/icons';
+  // import { add } from 'ionicons/icons';
+  import { useRouter } from 'vue-router';
   
   export default {
-      components: { IonFab, IonFabButton, IonIcon, IonButtons,IonContent,IonCard,IonCardContent,IonSearchbar,IonButton, IonNavLink,IonHeader, IonMenu, IonMenuButton, IonPage, IonTitle, IonToolbar},
+      components: { IonFab, IonFabButton, IonIcon, IonButtons,IonContent,IonCard,IonCardContent,IonSearchbar,IonButton,IonHeader, IonMenu, IonMenuButton, IonPage, IonTitle, IonToolbar},
       data() {
         return {
-            orderTaxi: my,
+          orderTaxi: my,
         };
       },
       setup() {
-        return { add };
+        const router = useRouter();
+        return { router };
+        // return { add };
       },
+      methods: {
+        order_taxi(){
+          this.router.push('/taxiorder');
+        }
+      }
     };
   </script>
   
