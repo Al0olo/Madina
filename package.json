@@ -23,6 +23,7 @@
     "@ionic/vue-router": "^8.0.0",
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
+    "dotenv": "^16.4.5",
     "i18n": "^0.15.1",
     "ionicons": "^7.0.0",
     "vue": "^3.3.0",

@@ -1,6 +1,6 @@
 import axios from "axios";
 const axiosInstance = axios.create({
-  baseURL: process.env.VUE_APP_API_BASE_URL,
+  baseURL: process.env.VITE_API_BASE_URL,
 });
 axiosInstance.interceptors.response.use(
   (response) => response,
