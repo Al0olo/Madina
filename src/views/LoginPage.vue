@@ -28,6 +28,7 @@
   import { IonContent,IonInput,  IonPage,IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonButton } from '@ionic/vue';
   import HomePage from './IntroPage.vue';
   import {Signup} from '../apis/Auth';
+  import { useRouter } from 'vue-router';
   export default {
       components: { IonButton, IonContent, IonPage,IonInput,IonCard,IonCardContent, IonCardHeader, IonCardTitle},
       data() {
@@ -39,11 +40,19 @@
           }
         };
       },
+      setup() {
+      const router = useRouter();
+      return { router };
+      },
       methods: {
         async signup(){
-          const response = await Signup(this.data);
-          if (response.data.message.status_code == 201){
+          const data = {
+            data : this.data
+          }
+          const response = await Signup(data);
+          if (response.data.message.status_code == 201 || response.data.message.status_code == 202 || response.data.message.status_code == 203){
             console.log("Client");
+            this.router.push('/intro');
           }
         }
       }
