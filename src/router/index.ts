@@ -4,6 +4,11 @@ import HomePage from '../views/HomePage.vue'
 import IntroPage from '../views/IntroPage.vue'
 import TaxiOrder from '../views/TaxiOrdersPage.vue'
 
+import InsideCity from '../views/InsideCityPage.vue'
+import OutsideCity from '../views/OutsideCityPage.vue'
+import Airports from '../views/AirportsPage.vue'
+
+
 import OrdercreatedPage from '../views/CreatedOrderPage.vue'
 
 
@@ -32,6 +37,21 @@ const routes: Array<RouteRecordRaw> = [
     path: '/taxiorder',
     name: 'taxiOrder',
     component: TaxiOrder
+  },
+  {
+    path: '/inside',
+    name: 'insideCity',
+    component: InsideCity
+  },
+  {
+    path: '/outside',
+    name: 'outsideCity',
+    component: OutsideCity
+  },
+  {
+    path: '/airports',
+    name: 'Airports',
+    component: Airports
   },
 ]
 

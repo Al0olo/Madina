@@ -7,21 +7,21 @@
             <ion-card id="taxi-banner">
                 <ion-card-content>
                     <img alt="Silhouette of mountains" src="../assets/img/InsideCityBanner.svg" style="width:100%;height:100%;position:fixed;top:0;left:0" />
-                    <ion-nav-link router-direction="forward" :component="insideCity"> <ion-button id="login-button">{{ ("Order Taxi") }} </ion-button></ion-nav-link>
+                    <ion-button router-link="/inside" id="login-button">{{ ("Order Taxi") }} </ion-button>
                 </ion-card-content>
             </ion-card>
             <ion-card id="taxi-banner">
                 <ion-card-content>
                     <img alt="Silhouette of mountains" src="../assets/img/OutsideCityBanner.svg" style="width:100%;height:100%;position:fixed;top:0;left:0" />
-                    <ion-nav-link router-direction="forward" :component="OutsideCity"> <ion-button id="login-button">{{ ("Order Taxi") }} </ion-button></ion-nav-link>
+                    <ion-button router-link="/outside" id="login-button">{{ ("Order Taxi") }} </ion-button>
                 </ion-card-content>
             </ion-card>
             
             <ion-card id="airports-banner">
                 <ion-card-content>
                     <img alt="Silhouette of mountains" src="../assets/img/BetweenGovernatesBanner.svg" style="width:100%;height:100%;position:fixed;top:0;left:0" />
-                    <ion-nav-link router-direction="forward" :component="Airports"> <ion-button id="login-button">{{ ("Order Taxi") }} </ion-button></ion-nav-link>
-                </ion-card-content>
+                    <ion-button router-link="/airports" id="login-button">{{ ("Order Taxi") }} </ion-button>
+                  </ion-card-content>
             </ion-card>
         </div>
       </ion-content>
@@ -32,18 +32,22 @@
   import insideCity from './InsideCityPage.vue';
   import OutsideCity from './OutsideCityPage.vue';
   import Airports from './AirportsPage.vue';
+  import { useRouter } from 'vue-router';
 
-
-  import { IonContent,  IonPage,IonCard, IonCardContent,IonButton, IonNavLink } from '@ionic/vue';
+  import { IonContent,  IonPage,IonCard, IonCardContent,IonButton } from '@ionic/vue';
   
   export default {
-      components: { IonContent, IonPage,IonCard,IonCardContent,IonButton, IonNavLink},
+      components: { IonContent, IonPage,IonCard,IonCardContent,IonButton},
       data() {
         return {
           insideCity: insideCity,
           OutsideCity: OutsideCity,
           Airports: Airports,
         };
+      },
+      setup() {
+        const router = useRouter();
+        return { router };
       },
     };
   </script>
