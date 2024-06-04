@@ -11,10 +11,10 @@
             </ion-card-header>
           
             <ion-card-content>
-                <ion-input class="my-3" fill="solid" v-moel="data.full_name" placeholder="Name"></ion-input>
+                <ion-input class="my-3" fill="solid" v-model="data.full_name" placeholder="Name"></ion-input>
 
                 <ion-input class="mb-3" fill="solid" v-model="data.phone_number" placeholder="Mobile Number"></ion-input>
-                <ion-nav-link router-direction="forward" :component="login"> <ion-button id="login-button">{{ ("Sign Up") }} </ion-button></ion-nav-link>
+                <!-- <ion-nav-link router-direction="forward" :component="login"> <ion-button id="login-button">{{ ("Sign Up") }} </ion-button></ion-nav-link> -->
                 <ion-button @click="signup" id="test-button">{{ ("Sign Up") }} </ion-button>         
               </ion-card-content>
 
@@ -25,11 +25,11 @@
   </template>
   
   <script lang="ts">
-  import { IonContent,IonInput,  IonPage,IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonButton, IonNavLink } from '@ionic/vue';
+  import { IonContent,IonInput,  IonPage,IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonButton } from '@ionic/vue';
   import HomePage from './IntroPage.vue';
   import {Signup} from '../apis/Auth';
   export default {
-      components: { IonButton, IonContent, IonNavLink, IonPage,IonInput,IonCard,IonCardContent, IonCardHeader, IonCardTitle},
+      components: { IonButton, IonContent, IonPage,IonInput,IonCard,IonCardContent, IonCardHeader, IonCardTitle},
       data() {
         return {
           login: HomePage,
